@@ -169,7 +169,10 @@ void printS(ListaSimple *lista)
 
 int *Ej4(int *vector1, int *vector2)
 {
-    int *interseccion = malloc(sizeof(vector1));
+    int size;
+    for(int i = 0; vector1[i] != -1; i++)
+        size++;
+    int *interseccion = malloc(size * sizeof(int));
     int k = 0;
     for(int i = 0; vector1[i] != -1; i++)
     {
